@@ -1,0 +1,69 @@
+
+#include <iostream>
+#include "BST.hpp"
+using namespace std;
+
+int main()
+{
+    {
+        BST<int> tree;
+
+        cout << "===== BINARY SEARCH TREE =====\n";
+
+        // Insert values
+        cout << "\nInserting values: ";
+        int values[] = {50, 30, 70, 20, 40, 60, 80};
+
+        for (int i = 0; i < 7; i++)
+        {
+            tree.insert(values[i]);
+            cout << values[i] << " ";
+        }
+
+        // Tree traversals
+        cout << "\n\nIn-Order Traversal: ";
+        tree.displayInOrder();
+
+        cout << "Pre-Order Traversal: ";
+        tree.displayPreOrder();
+
+        cout << "Post-Order Traversal: ";
+        tree.displayPostOrder();
+
+        // Search
+        cout << "\n===== SEARCH OPERATION =====\n";
+
+        int searchValue = 40;
+
+        if (tree.search(searchValue))
+            cout << searchValue << " found in the tree.\n";
+        else
+            cout << searchValue << " not found in the tree.\n";
+
+        searchValue = 90;
+
+        if (tree.search(searchValue))
+            cout << searchValue << " found in the tree.\n";
+        else
+            cout << searchValue << " not found in the tree.\n";
+
+        // Delete
+        cout << "\n===== DELETE OPERATION =====\n";
+
+        cout << "Deleting 20 (leaf node).\n";
+        tree.remove(20);
+
+        cout << "Deleting 30 (node with one child).\n";
+        tree.remove(30);
+
+        cout << "Deleting 50 (node with two children).\n";
+        tree.remove(50);
+
+        cout << "\nIn-Order Traversal after deletion: ";
+        tree.displayInOrder();
+    }
+
+    cout << "\nTree memory released successfully.\n";
+
+    return 0;
+}
