@@ -1,0 +1,24 @@
+===== BINARY SEARCH TREE =====
+
+Inserting values: 50 30 70 20 40 60 80 
+
+In-Order Traversal: 20 30 40 50 60 70 80 
+Pre-Order Traversal: 50 30 20 40 70 60 80 
+Post-Order Traversal: 20 40 30 60 80 70 50 
+
+===== SEARCH OPERATION =====
+40 found in the tree.
+90 not found in the tree.
+
+===== DELETE OPERATION =====
+Deleting 20 (leaf node).
+Deleting 30 (node with one child).
+Deleting 50 (node with two children).
+
+In-Order Traversal after deletion: 40 60 70 80 
+
+Tree memory released successfully.
+
+
+...Program finished with exit code 0
+Press ENTER to exit console.
